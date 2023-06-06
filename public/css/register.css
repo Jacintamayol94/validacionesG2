@@ -1,0 +1,67 @@
+.form-group {
+    margin-bottom: 10px;
+}
+
+body {
+    background-color: rgb(176, 176, 207);
+    text-align: center;
+}
+
+.formulario-register {
+    background-color: whitesmoke;
+    border: 2px rgb(190, 221, 190) solid;
+    border-radius: 14px;
+    width: 25%;
+    padding: 20px;
+}
+
+.container-form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;  
+    justify-content: center;
+}
+
+.text-danger {
+    color: rgb(184, 32, 32);
+    margin: 5px;
+}
+
+.is-invalid {
+    border: 1px rgb(184, 32, 32) solid;
+}
+
+
+.form-group input:focus {
+    border: 2px rgb(184, 32, 32) solid;
+    outline: none;
+    box-shadow: rgb(184, 32, 32);
+}
+
+.form-group input {
+    margin: 5px;
+}
+
+.exclamation {
+    appearance: none;
+    background: none;
+    background-image: url('/images/circle-exclamation-solid.svg');
+    background-position: right center;
+    background-repeat: no-repeat; 
+}
+
+.button {
+    margin: 10px;
+    font-size: 16px;
+    background-color: rgb(190, 221, 190);
+    border: 2px black solid;
+    border-radius: 10px;
+}
+
+.button:hover{
+    background-color: black;
+    color: rgb(190, 221, 190);
+}
+
+
+
