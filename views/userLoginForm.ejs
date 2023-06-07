@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/register.css">
+    <title>Document</title>
+</head>
+<body>
+
+<h2>Formulario de login</h2>
+
+<div class="container-form">
+
+<form method="POST" action="/user/login" class="formulario-register" enctype="multipart/form-data">
+        
+        <div class="form-group">
+            <label><b>Usuario:</b></label>
+            <% if (locals.errors && errors.user) { %>
+                <input type="text" name="user" class="form-control exclamation <%= locals.errors && errors.user ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.user : null %>">
+            <% } else { %>
+                <input type="text" name="user" class="form-control <%= locals.errors && errors.user ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.user : null %>">
+                
+            <% } %> 
+            <% if (locals.errors && errors.user) { %>
+                <div class="text-danger">
+                    <%= errors.user.msg %>
+                </div>
+            <% } %>
+        </div>
+
+        <div class="form-group">
+            <label><b>Contraseña:</b></label>
+            <% if (locals.errors && errors.password) { %>
+                <input type="password" name="password" class="form-control exclamation <%= locals.errors && errors.password ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.password : null %>">
+            <% } else { %>
+                <input type="password" name="password" class="form-control<%= locals.errors && errors.password ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.password : null %>">
+            <% } %> 
+            <% if (locals.errors && errors.password) { %>
+                <div class="text-danger">
+                    <%= errors.password.msg %>
+                </div>
+            <% } %>
+        </div>
+
+        <div>
+        <label>Recordarme</label>
+        <input type="checkbox">
+        </div>
+        
+        <button type="submit" class="button">Register</button>
+     
+</form>
+
+</div>

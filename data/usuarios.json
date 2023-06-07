@@ -1,0 +1,10 @@
+[
+{
+    "id": 1,
+    "fullName": "Juan Perez",
+    "email": "juan@gmail.com",
+    "password": "hola",
+    "country": "Argentina",
+    "avatar": "juana.jpg"
+}
+]

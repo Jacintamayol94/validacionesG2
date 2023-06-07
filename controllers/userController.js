@@ -18,6 +18,17 @@ const controller = {
     login: (req, res) => {
         return res.render('userLoginForm');
     },
+    processLogin: (req, res) => {
+        const resultValidation = validationResult(req);
+        
+        if (resultValidation.errors.length > 0) {
+            return res.render('userLoginForm', {
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            })
+        }
+        return res.send("Ok")
+    },
     profile: (req, res) => {
         return res.render('userProfile');
     }
