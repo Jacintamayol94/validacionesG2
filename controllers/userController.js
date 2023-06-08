@@ -2,8 +2,6 @@ const { validationResult } = require ('express-validator');
 
 const user = require('../model/user');
 
-const path = require ('path');
-
 const bcryptjs = require('bcryptjs');
 
 const controller = {
@@ -11,6 +9,7 @@ const controller = {
         return res.render('userRegisterForm');
     },
     processRegister: (req, res) => {
+
             const resultValidation = validationResult(req);
             
             if (resultValidation.errors.length > 0) {
@@ -41,19 +40,39 @@ const controller = {
         return res.render('userLoginForm');
     },
     processLogin: (req, res) => {
-        const resultValidation = validationResult(req);
-        
-        if (resultValidation.errors.length > 0) {
+
+        console.log(req.body);
+        res.send('Se registró un usuario');
+
+        let userToLogin = user.findByField('email', req.body.email);
+
+        if (userToLogin){
+            let isOkPass = bcrypt.compareSync(req.body.password, userToLogin.password)
+            if (isOkPass) {
+                return res.send ('Ok, puedes ingresar')
+            }
             return res.render('userLoginForm', {
-                errors: resultValidation.mapped(),
-                oldData: req.body
-            })
+                errors: {
+                    email: {
+                    msg: 'Las credenciales son inválidas'
+                }
+            }
+            });
         }
-        return res.send("Ok")
+        
+        return res.render('userLoginForm', {
+            errors: {
+                email: {
+                msg: 'No se encuentra este email'
+            }
+        }
+        });
     },
+
     profile: (req, res) => {
         return res.render('userProfile');
     }
 }
 
-module.exports = controller;  
+module.exports = controller;
+

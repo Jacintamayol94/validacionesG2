@@ -24,9 +24,9 @@ router.post('/register', uploadFile.single('avatar'), validations, userControlle
 router.get('/login', userController.login);
 
 // Procesar el login
-router.post('/login', validations, userController.processLogin);
+router.post('/login', userController.processLogin);
 
 // Perfil de Usuario
-router.get('/profile/:userId', userController.profile);
+router.get('/profile/', userController.profile);
 
 module.exports = router;

@@ -56,5 +56,6 @@ const user = {
         return true;
     }
 }
-    module.exports = user;
+
+module.exports = user;
 

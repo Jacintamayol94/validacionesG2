@@ -1,63 +1,38 @@
 [
  {
   "id": 1,
-  "fullName": "Juana Perez",
-  "email": "juana@gmail.com",
-  "password": "hola",
-  "country": "Argentina",
-  "avatar": "juana.jpg"
+  "fullName": "Jacinta",
+  "user": "Jaz",
+  "password": "$2a$10$1iAcMzp5rXtJlLeqX49HOu9RLDOkFpJiqAOPa3tqlq.hCo3rN/HKu",
+  "email": "jacimayol94@gmail.com",
+  "ciudad": "Buenos Aires",
+  "avatar": "1686230947269-profileImg.jpg"
  },
  {
   "id": 2,
-  "fullName": "Pepito",
-  "user": "pepe",
-  "password": "jua",
-  "email": "pepe@gmail.com",
-  "ciudad": "Venado Tuerto"
+  "fullName": "Javi",
+  "user": "Javier",
+  "password": "$2a$10$iisqk8g46qg7cD5NoMo0y.uvL0VqGbjzD4Pa6dpy8An./43DkaBWm",
+  "email": "javi@dh.com",
+  "ciudad": "Buenos Aires",
+  "avatar": "1686231691174-profileImg.jpg"
  },
  {
   "id": 3,
-  "fullName": "Pepito",
-  "user": "pepi",
-  "password": "chau",
-  "email": "pepe@dh.com",
+  "fullName": "Olivia",
+  "user": "Oli",
+  "password": "$2a$10$/q.7Z7mRF/0AXbkokXqGmeey0SRAVaWQoKbms/AnMpCqEzFClyKXS",
+  "email": "oli@gmail.com",
   "ciudad": "Buenos Aires",
-  "avatar": "1686225038784-profileImg.jpg"
+  "avatar": "1686234503340-profileImg.jpg"
  },
  {
   "id": 4,
-  "fullName": "Ana Helena",
-  "user": "mendoza",
-  "password": "$2a$10$RtZWYZ/qbeAyCqK84xmtourF.NYhGB6BRv.pb3kyte.FQM0Inh0x2",
-  "email": "helen@gmail.com",
-  "ciudad": "Buenos Aires",
-  "avatar": "1686227544652-profileImg.jpg"
- },
- {
-  "id": 5,
-  "fullName": "Anita",
-  "user": "helenaana",
-  "password": "$2a$10$qJoJn5EyXbmgThsxKwccNuHfpIzvJVXn6uzadISFp.HV7mcTYOyoy",
-  "email": "helen@gmail.com",
-  "ciudad": "Buenos Aires",
-  "avatar": "1686227947409-profileImg.jpg"
- },
- {
-  "id": 6,
-  "fullName": "ana helena mendoza",
-  "user": "ani",
-  "password": "$2a$10$LmidaL/EkhB9UgdQ0PjKuOa9JySHUjxklRfCkRkgWzt3fJlcVyVyO",
-  "email": "helen@gmail.com",
-  "ciudad": "Buenos Aires",
-  "avatar": "1686228250383-profileImg.jpg"
- },
- {
-  "id": 7,
-  "fullName": "jaz mayol",
-  "user": "jaz123",
-  "password": "$2a$10$bW1Sl7P9KhNfJnf8G5EDBe0hU7P4VMPTMk53qLDtudaPG2PBXUsEy",
-  "email": "jazm@gmail.com",
-  "ciudad": "Buenos Aires",
-  "avatar": "1686230086137-profileImg.jpg"
+  "fullName": "Isa",
+  "user": "Isabel",
+  "password": "$2a$10$IPhvkgcSS47Ph60jVQ6dj.ib2DfmSmoyfc6AKaaDFJzwSqgIbRiAa",
+  "email": "isa@gmail.com",
+  "ciudad": "Venado Tuerto",
+  "avatar": "1686238244064-profileImg.jpg"
  }
 ]
