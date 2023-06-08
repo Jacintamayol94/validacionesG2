@@ -13,13 +13,19 @@
 
 <div class="container-form">
 
-<form method="post" action="/user/login" class="formulario-register" enctype="multipart/form-data">
+<form method="post" action="/user/login" class="formulario-register">
     
 
         <div class="form-group">
             <label for="">Email:</label>
         
             <input type="email" name="email" class="form-control"> 
+
+            <% if (locals.errors && errors.email) { %>
+                <div class="text-danger">
+                    <%= errors.email.msg %>
+                </div>
+            <% } %>
                 
         </div>
 

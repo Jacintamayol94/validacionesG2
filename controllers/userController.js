@@ -2,7 +2,7 @@ const { validationResult } = require ('express-validator');
 
 const user = require('../model/user');
 
-const bcryptjs = require('bcryptjs');
+const bcrypt = require('bcryptjs');
 
 const controller = {
     register: (req, res) => {
@@ -29,7 +29,7 @@ const controller = {
 
             let userToCreate = {
                 ...req.body,
-                password: bcryptjs.hashSync(req.body.password, 10),
+                password: bcrypt.hashSync(req.body.password, 10),
                 avatar: req.file.filename
             }
 
@@ -41,15 +41,12 @@ const controller = {
     },
     processLogin: (req, res) => {
 
-        console.log(req.body);
-        res.send('Se registró un usuario');
-
         let userToLogin = user.findByField('email', req.body.email);
 
         if (userToLogin){
             let isOkPass = bcrypt.compareSync(req.body.password, userToLogin.password)
             if (isOkPass) {
-                return res.send ('Ok, puedes ingresar')
+                return res.redirect('/user/profile')
             }
             return res.render('userLoginForm', {
                 errors: {

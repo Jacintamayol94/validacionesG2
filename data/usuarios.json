@@ -34,5 +34,14 @@
   "email": "isa@gmail.com",
   "ciudad": "Venado Tuerto",
   "avatar": "1686238244064-profileImg.jpg"
+ },
+ {
+  "id": 5,
+  "fullName": "Benjamin Mayol",
+  "user": "Benja",
+  "password": "$2a$10$mase/5OB6fjfFmnzQIv6O.qTLsm1WaBYbcwKallonjdC1G/ibfr3C",
+  "email": "benjamayol@gmail.com",
+  "ciudad": "Buenos Aires",
+  "avatar": "1686247424291-profileImg.jpg"
  }
 ]

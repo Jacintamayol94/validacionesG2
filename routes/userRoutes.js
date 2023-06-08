@@ -27,6 +27,6 @@ router.get('/login', userController.login);
 router.post('/login', userController.processLogin);
 
 // Perfil de Usuario
-router.get('/profile/', userController.profile);
+router.get('/profile', userController.profile);
 
 module.exports = router;
