@@ -53,6 +53,11 @@ const controller = {
             if (isOkPass) {
                 delete userToLogin.password;
                 req.session.userLogged = userToLogin;
+
+                if(req.body.remember_user){
+                    res.cookie('userEmail', req.body.email, { maxAge: 1000 * 600 })
+                }
+
                 return res.redirect('/user/profile')
             }
             return res.render('userLoginForm', {
@@ -80,6 +85,7 @@ const controller = {
     },
 
     logout: (req, res) => {
+        res.clearCookie('userEmail')
         req.session.destroy();
         console.log(req.session);
         return res.redirect('/user');

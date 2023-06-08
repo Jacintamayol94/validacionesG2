@@ -17,6 +17,8 @@
         </div>
         <%if (locals.isLogged) { %>
         <section class="login">
+            <img src="/images/avatars/<%= locals.userLogged.avatar %>" width="40px" style="border-radius: 100%">
+            <p>Hola <%= locals.userLogged.fullName %> </p>
             <a href="/user/profile"><button class="registro">
                     <p>Perfil</p>
                 </button></a>
