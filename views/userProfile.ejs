@@ -4,9 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/home.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>Holaaa este es tu perfil</h1>
+    <%- include("./partials/header") %>
+    <main>
+    <div class="profile-container">
+    <div class = "perfil-user">
+    <h1>Holaaa <%= user.fullName %>!</h1>
+    <img src="/images/avatars/<%= user.avatar %>">
+    <br>
+    <br>
+    <div class ="alert-success"><h2><%= user.email %></h2></div>
+    </div>
+    <a href="/user/logout"><h4 class="button">Log out</h4></a>
+    </div>
+    </main>
 </body>
 </html>

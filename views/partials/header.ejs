@@ -1,0 +1,50 @@
+<header>
+    <section class="mainheader-topbar">
+        <a href="#" class="burger-menu">
+            <i class="fa-solid fa-bars-staggered fa-xl" style="color: #000000;"></i>
+        </a>
+        <img src="/images/logo-sinfondo.png" class="logo">
+        <div class="persona"><i class="fa-solid fa-user fa-xl" style="color: #000000;"></i></div>
+        <div class="buscador">
+            <select>
+                <option>Buenos Aires</option>
+                <option>Caracas</option>
+                <option>Bahía Blanca</option>
+                <option>Santa Fe</option>
+            </select>
+            <input type="text"></input>
+            <div class="lupita"><i class="fa-solid fa-magnifying-glass"></i></div>
+        </div>
+        <%if (locals.isLogged) { %>
+        <section class="login">
+            <a href="/user/profile"><button class="registro">
+                    <p>Perfil</p>
+                </button></a>
+            <a href="/user/logout"><button class="ingreso">
+                    <p>Log out</p>
+                </button></a>
+        </section>
+        <% } else { %>
+
+        <section class="login">
+            <a href="/user/register"><button class="registro">
+                    <p>Registro</p>
+                </button></a>
+            <a href="/user/login"><button class="ingreso">
+                    <p>Ingresar</p>
+                </button></a>
+        </section>
+        
+        <% } %>
+
+
+    </section>
+    <nav class="main-navbar">
+        <ul>
+            <li><a id="actividades">Actividades</a></li>
+            <li><a id="promociones">Promociones</a></li>
+            <li><a id="blog">Blog</a></li>
+            <li><a id="compras">Compras</a></li>
+        </ul>
+    </nav>
+</header>

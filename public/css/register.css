@@ -5,6 +5,7 @@
 body {
     background-color: rgb(176, 176, 207);
     text-align: center;
+    margin: 0;
 }
 
 .formulario-register {

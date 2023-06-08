@@ -5,6 +5,11 @@ const user = require('../model/user');
 const bcrypt = require('bcryptjs');
 
 const controller = {
+
+    home: (req, res) => {
+        return res.render('index');
+    },
+
     register: (req, res) => {
         return res.render('userRegisterForm');
     },
@@ -46,6 +51,8 @@ const controller = {
         if (userToLogin){
             let isOkPass = bcrypt.compareSync(req.body.password, userToLogin.password)
             if (isOkPass) {
+                delete userToLogin.password;
+                req.session.userLogged = userToLogin;
                 return res.redirect('/user/profile')
             }
             return res.render('userLoginForm', {
@@ -67,7 +74,15 @@ const controller = {
     },
 
     profile: (req, res) => {
-        return res.render('userProfile');
+        return res.render('userProfile', {
+            user: req.session.userLogged
+        });
+    },
+
+    logout: (req, res) => {
+        req.session.destroy();
+        console.log(req.session);
+        return res.redirect('/user');
     }
 }
 

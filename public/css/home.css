@@ -1,0 +1,231 @@
+/* Header */
+
+header {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: white;
+}
+
+.mainheader-topbar {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 5px;
+}
+
+.logo {
+    max-width: 100px;
+}
+
+.ingreso {
+    display: none;
+}
+
+.registro {
+    display: none;
+}
+
+/* Buscador */
+
+header .buscador {
+    width: 270px;
+    border-radius: 16px;
+    border: 1px solid #e8e8e8;
+    background-color: #e8e8e8;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px;
+    margin: auto;
+
+}
+
+.buscador input {
+    width: 80%;
+    border: none;
+    outline: none;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: #e8e8e8;
+    border-radius: 16px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+header input:focus {
+    border: 1px #006e7f solid;
+}
+
+.buscador i {
+    width: 10%;
+}
+
+.lupita {
+    background-color: #00a170;
+    border: 1px solid #00a170;
+    border-radius: 32px;
+    padding: 2%;
+}
+
+.buscador select {
+    border: 1px solid #e8e8e8;
+    background-color: white;
+    border-radius: 14px;
+    padding: 1%;
+}
+
+.persona {
+    display: inline-block;
+}
+
+.persona:hover {
+    color: #5c5d5b;
+}
+
+.burger-menu i:hover {
+    color: #5c5d5b;
+}
+
+/* Navegador */
+
+.main-navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-navbar a {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    padding: 5px 0;
+    font-size: 17px;
+}
+
+.main-navbar {
+    display: none;
+}
+
+.main-navbar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.main-navbar ul li {
+    margin: 15px;
+}
+
+.main-navbar ul li:hover {
+    font-weight: 550;
+}
+
+@media (min-width: 669px) {
+
+    /* Header */
+
+    .mainheader-topbar {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 10px;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    .logo {
+        max-width: 128px;
+    }
+
+    .ingreso {
+        width: 80px;
+        height: 40px;
+        border-radius: 14px;
+        border: 1px solid #e8e8e8;
+        background-color: #e8e8e8;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        padding: 4px 8px;
+    }
+
+    .ingreso p {
+        font-style: 'Roboto';
+        font-size: 16px;
+    }
+
+    .ingreso:hover {
+        background-color: #c1c1c1;
+        border: 1px solid #c1c1c1;
+        font-weight: 550;
+    }
+
+    .registro {
+        width: 80px;
+        height: 40px;
+        border-radius: 14px;
+        border: 0px;
+        background-color: rgba(0,0,0,0%);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        padding: 4px 8px;
+    }
+
+    .registro p {
+        font-style: 'Roboto';
+        font-size: 16px;
+    }
+
+    .login a {
+        text-decoration: none;
+    }
+
+    .registro:hover {
+        border: 1px solid rgba(0, 161, 112, 30%);
+        background-color: rgba(0, 161, 112, 30%);
+    }
+
+    .login {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .main-navbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 4px;
+    }
+
+    .main-navbar li {
+        padding-right: 30px;
+    }
+
+    .persona {
+        display: none;
+    }
+
+    .buscador {
+        width: 400px;
+    }
+
+    .main-navbar ul li:hover {
+        font-weight: 550;
+    }
+}
