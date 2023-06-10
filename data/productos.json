@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "name": "Macbook Pro",
+        "category": "laptop",
+        "price": 3000,
+        "retailer": "Apple INC"
+    },
+    {
+        "id": 2,
+        "name": "Taza J",
+        "category": "utensilios",
+        "price": 25,
+        "retailer": "Ikea"
+    },
+    {
+        "id": 3,
+        "name": "Oriquidea",
+        "category": "interiorismo",
+        "price": 800,
+        "retailer": "Garden CO"
+    },
+    {
+        "name": "Plate",
+        "category": "interiorismo",
+        "price": 800,
+        "retailer": "Coto",
+        "id": 4
+    },
+    {
+        "name": "Plate",
+        "category": "interiorismo",
+        "price": 800,
+        "retailer": "Coto",
+        "id": 5
+    }
+]
