@@ -8,23 +8,16 @@ function userLoggedMiddleware (req, res ,next) {
      res.locals.userLogged = req.session.userLogged;
       }
 
-     let emailInCookie = req.cookie.userEmail;
-     let userFromCookie =  user.findByField('email', emailInCookie)
-     console.log(userFromCookie) 
-     
-     /*if (req.cookies.userEmail){
-          let emailInCookie = req.cookies.userEmail;
-          let userFromCookie = user.findByField('email', emailInCookie);
-          req.session.userLogged = userFromCookie
-     }
-     */
+      
+     /*let emailInCookie = req.cookies.userEmail*/
+     let emailInCookie = "userEmail";
+     let userFromCookie =  user.findByField('email', emailInCookie) 
+     console.log(emailInCookie)
      
      if(userFromCookie) {
           req.session.userLogged = userFromCookie
      }
      
-     
-
      next()
 }
 
