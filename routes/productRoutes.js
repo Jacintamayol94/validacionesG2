@@ -31,7 +31,7 @@ router.get('/', productController.getList);
 router.post('/', upload.any('img'), productController.postProduct);
 
 // @GET /product/create
-router.get('/createProduct', productController.getCreate);
+router.get('/productCreate', productController.getCreate);
 
 
 // @GET /product/:id/detail ---> /products/5/detail
@@ -41,10 +41,10 @@ router.get('/:id/productDetail', productController.getDetail);
 router.delete('/:id/delete', productController.deleteProduct);
 
 // @GET /product/:id/update 
-router.get('/:id/editProduct', productController.getEdit);
+router.get('/:id/productEdit', productController.getEdit);
 
 // @PUT /product/:id/update ---> /products/5/put
-router.put('/:id/editProduct', productController.updateProduct);
+router.put('/:id/productEdit', productController.updateProduct);
 
 
 

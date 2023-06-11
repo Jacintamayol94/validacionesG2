@@ -1,0 +1,133 @@
+
+* {
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+
+/* Body */
+
+body {
+    background-color: white;
+    font-family: 'Roboto', 'sans-serif';    
+}
+
+/* Header */
+
+header {
+    background-color: rgba(0, 161, 112, 30%);
+}
+
+/* Main */
+
+form {
+    padding: 0px 20px 20px 20px;
+}
+
+h1 {
+    font-family: "Bebas Neue";
+    text-align: center;
+}
+
+form select {
+    background-color: #00a170;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    border-radius: 25px;
+}
+
+.select-categoria {
+    display:none;
+}
+
+input {
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.lsinput {
+    width: 100%;
+}
+
+form > div{
+    margin: 20px 0px;
+}
+
+.div-value-disc {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.div-value, .div-disc{
+    width: 45%;
+}
+
+.div-value input {
+    width: 100%;
+}
+
+.div-disc input {
+    width: 85%;
+}
+
+.div-disc > p{
+    display:inline-block;
+}
+
+.div-description .lfinput {
+    width: 100%;
+    padding: 20px;
+}
+
+.div-difficulty select {
+    margin-top: 5px;
+}
+
+.select-difficulty {
+    display: none;
+}
+
+.div-ages div {
+    margin: 10px 0px;
+}
+
+.div-submit-button button, .div-reset-button button{
+    width: 100%;
+    padding: 10px;
+    background-color: #00a170;
+}
+
+.div-reset-button button {
+    background-color: #0084bd;
+}
+
+.right-img {
+    display: none;
+}
+
+@media (min-width: 669px) {
+    
+}
+
+@media (min-width: 1200px) {
+    form {
+        width: 50%;
+        margin: 0;
+    }
+    .right-img {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .div-right-img {
+        width: 50%;
+    }   
+
+    .form-img {
+        display: flex;
+    }
+}
+

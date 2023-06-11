@@ -126,6 +126,100 @@ header input:focus {
     font-weight: 550;
 }
 
+/* Slider */
+
+.carousel {
+    background-color: rgba(0, 161, 112, 30%);
+    height: 600px;
+    border: rgba(0, 161, 112, 30%) 2px;
+    border-bottom-left-radius: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item img {
+    max-width: 300px;
+}
+
+.carousel-inner {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.carousel-item.active {
+    margin-right: -82.5%;
+}
+
+.carousel-item {
+    text-align: center;
+}
+
+.texto-slider h5 p {
+    color: black;
+}
+
+/*
+.slider-home {
+    background-color: rgba(0, 161, 112, 30%);
+    height: 600px;
+    border: rgba(0, 161, 112, 30%) 2px;
+    border-bottom-left-radius: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.slider-fotos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.slider-fotos img {
+    width: 300px;
+    border-top-right-radius: 40px;
+}
+
+.tarjeta {
+    text-decoration: underline;
+}
+
+.rutina {
+    background-color: whitesmoke;
+    border: whitesmoke solid 1px;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    font-family: 'Bebas Neue';
+}
+
+.rutina p {
+    font-size: 20px;
+}
+
+.rutina p:hover {
+    color: #006e7f;
+}
+
+.imagen-slider2 {
+    display: none;
+}*/
+
+
 @media (min-width: 669px) {
 
     /* Header */
@@ -228,4 +322,28 @@ header input:focus {
     .main-navbar ul li:hover {
         font-weight: 550;
     }
+
+    /* Slider */
+
+    /*.imagen-slider2 {
+        display: inline-block;
+    }
+
+    .slider-fotos img {
+        max-width: 300px;
+        border-top-right-radius: 40px;
+    }*/
+}
+
+
+@media (min-width: 763px) {
+    /*.slider-fotos img {
+        width: 300px;
+    }*/
+}
+
+@media (min-width: 1200px) {
+    /*.slider-fotos img {
+        width: 400px;
+    }*/
 }

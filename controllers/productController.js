@@ -7,7 +7,7 @@ const controller = {
     },
     
     getList: (req, res) => {
-            const productos = productModel.findAll();
+            const productos = product.findAll();
             res.render("productList", {
                 products: productos,
             })
@@ -15,13 +15,13 @@ const controller = {
     getEdit: (req, res) => {
             const id = Number(req.params.id);
     
-            const productoAModificar = productModel.findById(id)
+            const productoAModificar = product.findByPk(id)
     
             if (!productoAModificar) {
                 return res.send('error de id');
             }
     
-            res.render("editProduct", {
+            res.render("productEdit", {
                 products: productoAModificar
     });
     },
@@ -29,7 +29,7 @@ const controller = {
     getDetail: (req, res) => {
             const id = Number(req.params.id);
     
-            const productoAMostrar = productModel.findById(id);
+            const productoAMostrar = product.findByPk(id);
     
             if (!productoAMostrar) {
                 return res.send('error de id');
@@ -41,7 +41,7 @@ const controller = {
     deleteProduct: (req, res) => {
             const id = Number(req.params.id);
     
-            productModel.deleteById(id);
+            product.deleteById(id);
     
             res.redirect('/product');
     },
@@ -50,14 +50,14 @@ const controller = {
             const id = Number(req.params.id);
             const nuevosDatos = req.body;
     
-            productModel.updateById(id, nuevosDatos);
+            product.updateById(id, nuevosDatos);
     
             res.redirect('/product');
     },
 
     
     getCreate: (req, res) => {
-            res.render("createProduct")
+            res.render("productCreate")
     },
     
     postProduct: (req, res) => {
@@ -68,9 +68,9 @@ const controller = {
     
             datos.valor = Number(datos.valor);
            
-            datos.img = req.files.map(file => '/images/productos' + file.filename);
+            datos.img = req.files.map(file => '/images/products' + file.filename);
     
-            productModel.createOne(datos); 
+            product.createOne(datos); 
     
             res.redirect('/product');
     }

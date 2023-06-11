@@ -1,0 +1,243 @@
+body {
+    font-size: 16px;
+    font-family: "Roboto";
+}
+
+.titulo-general {
+    text-align: center;
+    background-color: #e8e8e8;
+    padding: 20px 5px;
+}
+
+/* Filtros */
+
+.nav-filtros {
+    background-color: #00a170;
+    padding: 20px;
+    margin: 20px 30px;
+    text-align: center;
+}
+
+.nav-filtros select {
+    border: none;
+    font-size: 20px;
+    text-align: left;
+    appearance: none;
+    background: none;
+    background-image: url('/images/caret-down-solid2.svg');
+    background-position: right center;
+    background-repeat: no-repeat;
+    padding-right: 20px;
+    width: 35%;
+}
+
+select:focus {
+    outline: none;
+}
+
+.side-bar {
+    display: none;
+}
+
+/* Side-bar */
+
+.check-dificultad div {
+    padding-bottom: 10px;
+}
+
+.check-edad div {
+    padding-bottom: 10px;
+}
+
+
+/* Actividades */
+
+/* Titulos generales */
+
+.titulo-fitness {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.titulo-fitness p {
+    border-left: 3px grey solid;
+    padding-left: 5px;
+    text-decoration: underline;
+    text-decoration-color: grey solid;
+}
+
+.titulo-fitness button {
+    background: none;
+    border: none;
+}
+
+/* Actividades cargadas */
+
+.actividades-container {
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 20px;
+    gap: 30px;
+}
+
+.actividad-ejemplo {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.actividad-ejemplo:hover {
+    background-color: rgba(0, 132, 189, 30%);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.foto {
+    position: relative;
+}
+
+.foto img {
+    max-width: 180px;
+}
+
+
+.etiqueta-actividad {
+    background-color: white;
+    width: 60%;
+    box-sizing: border-box;
+    position: absolute;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.etiqueta-actividad p {
+    height: 24px;
+    margin: auto;
+}
+
+/*.actividad-ejemplo img {
+    width: 100%;
+}*/
+
+.texto-actividad {
+    text-align: center;
+    margin: auto;
+    padding: 4px;
+}
+
+.seccion-texto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100%;
+    text-align: center;
+}
+
+.descripcion-actividad {
+    border-top: 3px grey solid;
+    overflow: hidden;
+    height: 100px;
+}
+
+.leermas button {
+    background: none;
+    border: none;
+    width: 80px;
+    font-size: 16px;
+    text-decoration: underline;
+    padding: 0px;
+    text-align: left;
+    margin: 10px 0;
+}
+
+.leermas p {
+    margin: auto;
+}
+
+
+.fitness {
+    margin-bottom: 80px;
+}
+
+.bebas {
+    font-family: 'Bebas Neue';
+}
+
+
+@media (min-width: 669px) {
+
+
+    main {
+        margin: 20px;
+    }
+
+    /* Footer */
+
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        gap: 10px;
+        padding-left: 50px;
+    }
+
+    .footer-columna1 {
+        width: 180px;
+    }
+
+    .footer-columna2 {
+        width: 180px;
+    }
+
+    .footer-columna4 {
+        width: 180px;
+    }
+
+    .footer-columna3 {
+        align-self: left;
+        width: 100%;
+    }
+
+    /* Filtros */
+
+    .titulo-general {
+        width: 100%;
+    }
+
+    .side-bar {
+        display: inline-block;
+        grid: side;
+    }
+
+    .nav-filtros select {
+        width: 15%;
+        font-size: 24px;
+    }
+
+    /* Actividades */
+
+    .actividades-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .productos-display {
+        grid: productos;
+    }
+
+    .container-grid {
+        display: grid;
+        grid-template-areas: "side productos";
+        grid-template-columns: 1fr 2fr;
+    }
+
+
+}

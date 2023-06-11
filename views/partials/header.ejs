@@ -19,20 +19,20 @@
         <section class="login">
             <img src="/images/avatars/<%= locals.userLogged.avatar %>" width="40px" style="border-radius: 100%">
             <p>Hola <%= locals.userLogged.fullName %> </p>
-            <a href="/user/profile"><button class="registro">
+            <a href="/profile"><button class="registro">
                     <p>Perfil</p>
                 </button></a>
-            <a href="/user/logout"><button class="ingreso">
+            <a href="/logout"><button class="ingreso">
                     <p>Log out</p>
                 </button></a>
         </section>
         <% } else { %>
 
         <section class="login">
-            <a href="/user/register"><button class="registro">
+            <a href="/register"><button class="registro">
                     <p>Registro</p>
                 </button></a>
-            <a href="/user/login"><button class="ingreso">
+            <a href="/login"><button class="ingreso">
                     <p>Ingresar</p>
                 </button></a>
         </section>

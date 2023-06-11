@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/productDetail.css">
+        
+    </head>
+
+<body>
+    <%- include("./partials/header") %>
+    <div class="banner-escalada">
+        <section class="titulo-general">
+            <%= products.category %>
+        </section>
+       
+        <section class="titulo-h1">
+            <h1><%= products.category %></h1>
+        </section>
+    </div>
+    <main class="main">
+
+        <div class="container-product">
+
+            <section class="container-img-producto">
+
+                <div class="img-producto">
+                    <img src="/images/<%= products.img %>" alt="gimArt" class="img-producto">
+                    <div class="boton"> <button class="reserva">Reservá</button></div>
+                    <i class="iconoDER" class="fa-solid fa-caret-right"></i>
+                </div>
+
+            </section>
+
+            <section class="texto-producto-container">
+        
+                <h3 class="texto-actividad" id="nombreActividad"><%= products.name%></h3>
+                    <p class="texto-actividad" ><%= products.retailer %></p>
+                    <p class="texto-actividad"><%= products.value %></p>
+                    <div class="texto-actividad"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                         class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></i><i
+                        class="fa-regular fa-star"></i></div>
+                        
+                        <div class="seccion-texto">
+                            <p class="texto-actividad">Valor</p>
+                            <h3><%= products.price %></h3>
+                        </div>
+                            
+                    </div>
+
+            </section>
+        </div>
+        </main>
+        </html>

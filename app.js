@@ -35,8 +35,8 @@ const userRoutes = require ('./routes/userRoutes');
 const productRoutes = require ('./routes/productRoutes');
 
 /*app.use('/', mainRoutes);*/
-app.use('/user', userRoutes);
-app.use('/user', productRoutes); 
+app.use(userRoutes);
+app.use('/product', productRoutes); 
 
 
 app.listen(3000, () => console.log('Servidor levantado en el puerto 3000'));

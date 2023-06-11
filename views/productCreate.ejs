@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/productCreate.css">
+        
+    </head>
+
+<body>
+    <%- include("./partials/header") %>
+        <main>
+            <h1>Publicar servicio</h1>
+            <div class="form-img">
+                <form action="/product" method="POST" enctype="multipart/form-data">
+                    <div class="div-categoria">
+                        <select class="categoria" name="categoria">
+                            <option default class="select-categoria" name="categoria" value="select-categoria">-
+                                Selecciona una categoria -</option>
+                            <option name="categoria" >Yoga</option>
+                            <option name="categoria" >Fitness</option>
+                            <option name="categoria" >Danzas</option>
+                            <option name="categoria" >Deportes</option>
+                        </select>
+                        <span class="feedback"></span>
+                    </div>
+                    <div class="div-subcategoria">
+                        <select class="categoria" name="subcategoria">
+                            <option default class="select-categoria" name="subcategoria" value="select-categoria">-
+                                Selecciona una subcategoria -</option>
+                            <option name="subcategoria" >1</option>
+                            <option name="subcategoria" >2</option>
+                            <option name="subcategoria" >3</option>
+                        </select>
+                        <span class="feedback"></span>
+                    </div>
+                    <div class="container-name-service">
+                        <label for="name-service">Nombre del servicio</label>
+                        <input class="lsinput" type="text" name="nombreActividad">
+                        <span class="feedback"></span>
+                    </div>
+                    <div class="div-value-disc">
+                        <div class="div-value">
+                            <label for="value">Valor</label>
+                            <input class="sinput" type="number" name="valor">
+                            <span class="feedback"></span>
+                        </div>
+                        <div class="div-disc">
+                            <label for="apply-disc">Aplicar descuento</label>
+                            <input class="sinput" placeholder="(opcional)" type="number" name="descuento">
+                            <p>%</p>
+                            <span class="feedback"></span>
+                        </div>
+                    </div>
+                    <div class="div-description">
+                        <label for="description">Descripción</label>
+                        <input class="lfinput" type="text" name="descripcion">
+                        <span class="feedback"></span>
+                    </div>
+                    <div class="div-add-pictures">
+                        <label for="add-pictures">Agregar fotos</label>
+                        <input class="add-pictures" type="file" name="img" accept="image/*">
+                        <span class="feedback"></span>
+                    </div>
+                    <div class="div-difficulty">
+                        <label for="dificultad">Dificultad</label>
+                        <select name="dificultad" class="difficulty">
+                            <!-- /*<option class="select-difficulty" default value="select-difficulty">- Selecciona la
+                                dificultad -</i></option>*/ -->
+                                <option default class="select-dificulty" name="dificultad" value="select-dificulty">-
+                                    Selecciona una subcategoría -</option>
+                            <option name="dificultad" >Principiante</option>
+                            <option name="dificultad" >Facil</option>
+                            <option name="dificultad" >Intermedio</option>
+                            <option name="dificultad" >Dificil</option>
+                            <option name="dificultad" >Avanzado</option>
+                        </select>
+                        <span class="feedback"></span>
+                    </div>
+                    <div class="div-complete-direction">
+                        <label for="complete-direction">Direccion Completa</label>
+                        <input class="lsinput" type="text" name="direccion">
+                        <span class="feedback"></span>
+                    </div>
+                    <div class="div-city">
+                        <label for="city">Ciudad</label>
+                        <input class="lsinput" type="text" name="city">
+                        <span class="feedback"></span>
+                    </div>
+                    <div class="div-ages">
+                        <label for="ages">Edades</label>
+                        <div>
+                            <input type="checkbox" name="edadesAlumnos" value="kids">Niños
+                        </div>
+                        <div>
+                            <input type="checkbox" name="edadesAlumnos" value="teen">Adolescentes
+                        </div>
+                        <div>
+                            <input type="checkbox" name="edadesAlumnos" value="young">Jóvenes
+                        </div>
+                        <div>
+                            <input type="checkbox" name="edadesAlumnos" value="adoults">Adultos
+                        </div>
+                        <span class="feedback"></span>
+                    </div>
+                    <div class="div-submit-button">
+                        <button class="submit-button" type="submit" value="submit">Enviar</button>
+                    </div>
+                    <div class="div-reset-button">
+                        <button class="reset-button" type="reset" value="reset">Borrar</button>
+                    </div>
+                </form>
+                <div class="div-right-img">
+                    <img class="right-img" src="/images/editworkouteasy2-b.png" alt="">
+                    <img class="right-img" src="/images/editworkouteasy3-b.png" alt="">
+                </div>
+            </div>
+        </main>
+</body>
+
+</html>

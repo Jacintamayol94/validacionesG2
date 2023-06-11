@@ -1,0 +1,235 @@
+body {
+    font-size: 16px;
+    font-family: "Roboto";
+}
+
+.header {
+    background-color: rgba(0, 161, 112, 0%);
+    border: none;
+}
+
+.main {
+    background-color: whitesmoke;
+}
+
+/* Banner */
+
+.titulo-general {
+    text-align: center;
+    padding: 20px 5px;
+    background-image: url('/images/diseno/banner-montana1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 50%;
+    z-index: 7;
+    position: relative;
+    height: 130px;
+
+}
+
+.banner-escalada {
+    position: relative;
+    z-index: 9;
+    width: 100vw;
+}
+
+.titulo-h1 {
+    opacity: 100%;
+    font-family: 'Bebas Neue', 'cursive', 'Roboto', 'sans-serif';
+    font-size: 18px;
+    text-align: center;
+    padding: 40px 20px 5px 20px;
+    position: absolute;
+    left: 32%;
+    top: 0px;
+    z-index: 10;
+    margin: auto;
+}
+
+/* Producto */
+
+.img-producto {
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+    margin-left: 0px;
+    padding-left: 15px;
+    border-radius: 0px 40px 0px 0px;
+    position: relative;
+}
+
+.container-img-producto {
+    margin-bottom: 30px;
+}
+
+.container-product {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border-bottom: 3px grey solid;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.boton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 270px;
+    height: 50px;
+    border: #006e52 solid 1px;
+    border-radius: 5px;
+    margin: 8px 0px;
+    position: relative;
+    left: 15px;
+    z-index: 99;
+}
+
+.reserva:hover {
+    background-color: rgba(0, 161, 112);
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border: none;
+}
+
+.reserva {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 2px;
+    background-color: #006e52;
+    color: white;
+    font-size: 24px;
+    font-family: 'Bebas Neue', 'cursive', 'Roboto', 'sans-serif';
+    width: 270px;
+    height: 50px;
+    transition: all 0.3s ease-in-out;
+    box-sizing: border-box;
+}
+
+
+/* Texto actividad */
+
+.texto-actividad {
+    text-align: center;
+    margin: auto;
+    padding: 4px;
+
+}
+
+.texto-producto-container {
+    margin-bottom: 30px;
+}
+
+#nombreActividad {
+    font-family: 'Bebas Neue', 'cursive', 'Roboto', 'sans-serif';
+    font-size: 24px;
+}
+
+.h3 {
+    font-family: 'Bebas Neue', 'cursive', 'Roboto', 'sans-serif';
+}
+
+.seccion-texto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100%;
+    text-align: center;
+    align-items: center;
+}
+
+.descripcion-actividad {
+    border-top: 3px grey solid;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+
+@media (min-width: 669px) {
+
+    .mainheader-topbar .buscador {
+        width: 50%;
+    }
+
+    .titulo-h1 {
+        opacity: 100%;
+        font-family: 'Bebas Neue', 'cursive', 'Roboto', 'sans-serif';
+        font-size: 25px;
+        text-align: center;
+        padding: 30px 20px 5px 20px;
+        position: absolute;
+        left: 45%;
+        top: 0px;
+        z-index: 10;
+        margin: auto;
+    }
+
+    /* Actividades */
+
+    .container-product {
+        margin-bottom: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .texto-producto-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-img-producto {
+        margin-left: 30%;
+    }
+
+    .foto {
+        height: 70%;
+    }
+
+    .nav-filtros select {
+        width: 20%;
+    }
+
+    main {
+        margin-bottom: 60px;
+    }
+
+    .actividad-ejemplo .descripcion-actividad {
+        border-top: 0px;
+    }
+
+
+}
+
+@media (min-width: 1200px) {
+    
+    .header {
+        width: 100vw;
+    }
+
+    /*.imagen {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+
+    }*/
+
+    .body {
+        margin-top: 200px;
+    }
+
+    .dificultad {
+        margin-left: 25px;
+        margin-top: 0px;
+    }
+
+    .img-producto {
+        justify-content: flex-start;
+    }
+
+}

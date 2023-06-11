@@ -39,7 +39,7 @@ const controller = {
             }
 
             let userCreated = user.create(userToCreate);
-            return res.redirect('/user/login')
+            return res.redirect('/login')
     },
     login: (req, res) => {
         return res.render('userLoginForm');
@@ -58,7 +58,7 @@ const controller = {
                     res.cookie('userEmail', req.body.email, { maxAge: 1000 * 600 })
                 }
 
-                return res.redirect('/user/profile')
+                return res.redirect('/profile')
             }
             return res.render('userLoginForm', {
                 errors: {
@@ -87,7 +87,7 @@ const controller = {
     logout: (req, res) => {
         res.clearCookie('userEmail')
         req.session.destroy();
-        return res.redirect('/user');
+        return res.redirect('/');
     }
 }
 
